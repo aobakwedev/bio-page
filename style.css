@@ -1,0 +1,216 @@
+/* 1. Navigation & Global Base Styles*/
+.navbar {
+  display: flex;
+  background-color: #111010;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+.nav-link:hover {
+  background-color: #9E1B32;
+  border-radius: 4px;
+}
+
+.active {
+  border-bottom: 3px solid #9E1B32;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    min-width: 100%;
+  }
+}
+
+a:focus,
+button:focus {
+  outline: 3px solid #9E1B32;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*2. Home & About Page Styles*/
+.head { 
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #493550;
+}
+
+.portrait {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 24px;
+  border: 3px solid var(--accent, #9E1B32);
+  background: var(--surface, transparent);
+}
+
+.profile {
+  width: 250px;
+  border-radius: 15%;
+}
+
+.divider {
+  border: none;
+  height: 2px;
+  background-color: #050505;
+  margin: 16px 0;
+}
+
+/*3. Projects Page & Grid Styles*/
+#projects {
+  color: #4c3d52;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  grid-template-areas:
+    "card1 card2"
+    "card3 card4";
+}
+
+.project-card {
+  background-color: #3a3a3a;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-card1 { 
+  grid-area: card1; 
+  background-color: #262020;
+  color: #d4d4d4; 
+}
+
+.project-card2 { 
+  grid-area: card2; 
+  background-color: #332c2c;
+  color: #d4d4d4; 
+}
+
+.project-card3 { 
+  grid-area: card3; 
+  background-color: #2c332c;
+  color: #d4d4d4; 
+}
+
+.project-card4 {
+  grid-area: card4; 
+  background-color: #2c2c33;
+  color: #d4d4d4;
+}
+
+/* =========================================
+   4. Contact Page & Form Styles
+   ========================================= */
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 480px;
+  padding: 16px;
+}
+ 
+#contactForm input,
+#contactForm select,
+#contactForm textarea {
+  padding: 10px;
+  border: 2px solid #999999;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+ 
+#contactForm input:focus,
+#contactForm textarea:focus {
+  outline: none;
+  border-color: #9E1B32;
+}
+ 
+#contactForm button {
+  background-color: #3a3a3a;
+  color: #ffffff;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+ 
+#contactForm button:hover {
+  background-color: #9E1B32;
+}
+
+/* =========================================
+   5. Universal Dark Mode Styles
+   ========================================= */
+body.dark {
+  background-color: #121212 !important;
+  color: #f1f1f1 !important;
+}
+
+body.dark .head,
+body.dark #projects {
+  color: #d1a1ff !important;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark label,
+body.dark legend,
+body.dark em {
+  color: #f1f1f1 !important;
+}
+
+body.dark .divider {
+  background-color: #444444 !important;
+}
+
+body.dark .project-card,
+body.dark fieldset,
+body.dark form {
+  background-color: #1e1e1e !important;
+  border-color: #333333 !important;
+}
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+  background-color: #2a2a2a !important;
+  color: #f1f1f1 !important;
+  border-color: #444444 !important;
+}
