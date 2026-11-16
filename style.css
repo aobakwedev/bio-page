@@ -134,9 +134,7 @@ button:focus {
   color: #d4d4d4;
 }
 
-/* =========================================
-   4. Contact Page & Form Styles
-   ========================================= */
+/*4. Contact Page & Form Styles */
 #contactForm {
   display: flex;
   flex-direction: column;
@@ -173,9 +171,7 @@ button:focus {
   background-color: #9E1B32;
 }
 
-/* =========================================
-   5. Universal Dark Mode Styles
-   ========================================= */
+/*5. Universal Dark Mode Styles */
 body.dark {
   background-color: #121212 !important;
   color: #f1f1f1 !important;
@@ -210,7 +206,7 @@ body.dark form {
 body.dark input,
 body.dark select,
 body.dark textarea {
-  background-color: #2a2a2a !important;
+  background-color: #3d1616 !important;
   color: #f1f1f1 !important;
   border-color: #444444 !important;
 }
