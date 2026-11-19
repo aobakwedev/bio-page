@@ -7,48 +7,63 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="projects.html" class="nav-link">Projects</a>
-        <a href="contacts.html" class="nav-link active">Contact</a>
-    </nav>
-   <section id="contact">
-  <h2>Contact Me</h2>
-  <fieldset>
-    <legend>Preferred reply</legend>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="contacts.html" class="nav-link active">Contact</a>
+        </nav>
+    </header>
 
-    <input type="radio" id="email" name="reply" value="email">
-    <label for="email">Email</label>
+    <main>
+        <section id="contact">
+            <h1>Contact Me</h1>
 
-    <input type="radio" id="phone" name="reply" value="phone">
-    <label for="phone">Phone</label>
-</fieldset>
-  <form id="contactForm">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required minlength="2">
- 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required placeholder="you@example.com">
+            <form id="contactForm">
+                <fieldset>
+                    <legend>Preferred reply</legend>
 
-     <label for="topic">Topic</label>
-     <input type="text" id="topic" name="topic" required placeholder="Project inquiry or question">
-      <option value="general">General question</option>
-      <option value="project">Project idea</option>
-      <option value="feedback">Feedback</option>
-    </select>
- 
-    <label for="message">Message</label>
-    <textarea id="message" placeholder="Your message..."></textarea>
-    <p id="charCounter">Characters: 0</p>
-    <button type="submit">Send</button>
-  </form>
-</section>
-<label for="sendCopy">Send me a copy of this message</label>
-<input type="checkbox" id="sendCopy" name="sendCopy">
-<label for="phone">Phone Number</label>
-<input type="tel" id="phone" name="phone" pattern="[0-9-]+" required>
+                    <input type="radio" id="replyEmail" name="reply" value="email" checked>
+                    <label for="replyEmail">Email</label>
 
-<script src="script.js"></script>
+                    <input type="radio" id="replyPhone" name="reply" value="phone">
+                    <label for="replyPhone">Phone</label>
+                </fieldset>
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required minlength="2">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9-]+" placeholder="0821234567" required>
+
+                <label for="topic">Topic</label>
+                <select id="topic" name="topic" required>
+                    <option value="">Choose a topic</option>
+                    <option value="general">General question</option>
+                    <option value="project">Project idea</option>
+                    <option value="feedback">Feedback</option>
+                </select>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+                <p id="charCounter" role="status">Characters: 0</p>
+
+                <input type="checkbox" id="sendCopy" name="sendCopy">
+                <label for="sendCopy">Send me a copy of this message</label>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Aobakwe Delphus Molepolle. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
