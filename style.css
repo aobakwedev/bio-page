@@ -210,3 +210,14 @@ body.dark textarea {
   color: #f1f1f1 !important;
   border-color: #444444 !important;
 }
+
+.checkbox-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-row input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
